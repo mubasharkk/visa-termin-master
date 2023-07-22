@@ -63,7 +63,7 @@ solve_captcha "captchapage.html" "appointment_captcha_month"
 
 
 #Get HTML page with latest available dates
-curl -X POST -v -L -s -S -F request_locale=en -F captchaText=$solution -F locationCode=kiew -F realmId=561 -F categoryId=1497 -b target/cookies -c target/cookies -o target/response.html "$consulate_base_url"
+curl -X POST -v -L -s -S -F request_locale=en -F captchaText=$solution -F locationCode=kara -F realmId=771 -F categoryId=2770 -b target/cookies -c target/cookies -o target/response.html "$consulate_base_url"
 
 #Parse HTML and see if notification is required
 available_date=$(python3 lib/parse_response.py $root_folder)
@@ -77,7 +77,7 @@ if [ "$available_date" != "NONE" ]; then
 
     #Notify telegram bot
 
-    curl -s -X POST https://api.telegram.org/bot<BOT TOKEN>/sendMessage -d chat_id=<CHAT ID> -d text=$available_date
+    curl -s -X POST https://api.telegram.org/6370972439:BBGElQwU8A3F7SQhcyEQyCmzfMsmWKduGkw/sendMessage -d chat_id=mubasharkk -d text=$available_date
 
     #****** Automatically book the appointment ********
 
@@ -103,8 +103,8 @@ if [ "$available_date" != "NONE" ]; then
     echo -e "Booking appointment for $booking_time" >> $log_file
 
     #Book Appointment
-      #lastname=test&firstname=testov&email=www%40eee.com&emailrepeat=www%40eee.com&fields%5B0%5D.content=a2345676&fields%5B0%5D.definitionId=4590&fields%5B0%5D.index=0&fields%5B1%5D.content=380997776655&fields%5B1%5D.definitionId=4591&fields%5B1%5D.index=1&captchaText=ca7ewy&locationCode=kiew&realmId=561&categoryId=1497&openingPeriodId=34537&date=30.12.2019&dateStr=30.12.2019&action%3Aappointment_addAppointment=Submit
-    curl -X POST -v -L -s -S -F request_locale=en -F captchaText=$solution -F locationCode=kiew -F realmId=561 -F categoryId=1785 -F openingPeriodId=$time_period -F date=$available_date -F dateStr=$available_date -F rebooking=true -F token=$rescheduling_token -F action:appointment_rebookAppointment=Submit -b target/cookies -c target/cookies -o target/bookingdone.html "$booking_base_url"
+      #lastname=test&firstname=testov&email=www%40eee.com&emailrepeat=www%40eee.com&fields%5B0%5D.content=a2345676&fields%5B0%5D.definitionId=4590&fields%5B0%5D.index=0&fields%5B1%5D.content=380997776655&fields%5B1%5D.definitionId=4591&fields%5B1%5D.index=1&captchaText=ca7ewy&locationCode=kara&realmId=771&categoryId=2770&openingPeriodId=34537&date=30.12.2019&dateStr=30.12.2019&action%3Aappointment_addAppointment=Submit
+    curl -X POST -v -L -s -S -F request_locale=en -F captchaText=$solution -F locationCode=kara -F realmId=771 -F categoryId=2770 -F openingPeriodId=$time_period -F date=$available_date -F dateStr=$available_date -F rebooking=true -F token=$rescheduling_token -F action:appointment_rebookAppointment=Submit -b target/cookies -c target/cookies -o target/bookingdone.html "$booking_base_url"
 else
     echo Need to notify : False >> $log_file
 fi

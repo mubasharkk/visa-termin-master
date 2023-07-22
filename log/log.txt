@@ -1,0 +1,38 @@
+
+
+
+Starting Process at 2023-07-17 13:50:44
+Saved captchapage.html at target/captchapage.html alongwith cookies
+Extract base64 encoded captcha image and saved at target/captcha.jpg
+
+
+
+Starting Process at 2023-07-17 13:52:00
+Saved captchapage.html at target/captchapage.html alongwith cookies
+Extract base64 encoded captcha image and saved at target/captcha.jpg
+
+
+
+Starting Process at 2023-07-17 13:53:37
+Saved captchapage.html at target/captchapage.html alongwith cookies
+Extract base64 encoded captcha image and saved at target/captcha.jpg
+Captcha has been solved - RequestId :  - Answer : 
+Available date is 
+Need to notify : True
+Sending Cloud Messaging Request to notify android phone.
+Booking Appointment automatically...
+booking url is https://service2.diplo.de/rktermin/
+Process Finished at 2023-07-17 13:53:50
+
+
+
+Starting Process at 2023-07-17 13:54:06
+Saved captchapage.html at target/captchapage.html alongwith cookies
+Extract base64 encoded captcha image and saved at target/captcha.jpg
+Captcha has been solved - RequestId :  - Answer : 
+Available date is 
+Need to notify : True
+Sending Cloud Messaging Request to notify android phone.
+Booking Appointment automatically...
+booking url is https://service2.diplo.de/rktermin/
+Process Finished at 2023-07-17 13:54:20

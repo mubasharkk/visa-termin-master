@@ -1,9 +1,9 @@
 #!/bin/bash
 
 #Set root_folder to the directory which contains run.sh
-root_folder="<DIR TO APP>"
-consulate_details="locationCode=kiew&realmId=561&categoryId=1497"
-rescheduling_token="2dddssasdfvkoadausiva98fash9f1"
+root_folder="/Users/mubasharkk/codes/mubasharkk/visa-termin-master/"
+consulate_details="locationCode=kara&realmId=771&categoryId=2770"
+rescheduling_token=""
 
 
 #DO NOT EDIT THESE
